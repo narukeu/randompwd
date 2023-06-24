@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="container rounded-4">
+      <h1 class="title">随机密码生成工具</h1>
+      <form>
+        <div class="form-group">
+          <label for="length">密码位数</label>
+          <input type="number" id="length" min="1" max="20" value="10" />
+        </div>
+        <div class="form-group">
+          <label for="estring">额外内容</label>
+          <input
+            type="text"
+            id="estring"
+            placeholder="将随机出现在生成的密码里"
+          />
+        </div>
+        <div class="form-group">
+          <label>生成选项</label>
+          <div class="checkbox-group">
+            <input
+              class="w-100"
+              type="checkbox"
+              id="upperCase"
+              name="options"
+              value="upperCase"
+            />
+            <label for="upperCase">大写字母</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              class="w-100 d-block"
+              type="checkbox"
+              id="symbols"
+              name="options"
+              value="symbols"
+            />
+            <label for="symbols">特殊符号</label>
+          </div>
+          <div class="checkbox-group">
+            <input
+              class="w-100"
+              type="checkbox"
+              id="digits"
+              name="options"
+              value="digits"
+            />
+            <label for="digits">生成数字</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>生成结果</label>
+          <div class="fs-16 w-100 p-10">
+            <div id="output"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <button
+            type="button"
+            onclick="generate()"
+          >
+            生成
+          </button>
+        </div>
+      </form>
+      <script src="./script.js"></script>
+    </div>
+  </body>
+</html>
